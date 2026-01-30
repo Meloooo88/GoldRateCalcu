@@ -4,17 +4,17 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
-const karat = 24
-const purity = (karat / 24) * 100
+const karat = 18
+const purity = (karat / 18) * 100  // Correct purity relative to 24K
 
-const goldRate = ref(9776.92) // Current gold rate
+const goldRate = ref(7332.69) // Current gold rate
 const grams = ref(0)
 const makingCharge = ref(0)
 const total = ref(0)
 
 function calculate() {
   const subtotal = goldRate.value * grams.value + makingCharge.value
-  total.value = subtotal * 1.12 // Adding 12% VAT
+  total.value = subtotal * 1.12 // Add 12% VAT
 }
 
 function goBack() {
@@ -77,7 +77,7 @@ button:hover {
 }
 .back-btn {
   background-color: #718096;
-  margin-top: 15px;
+  margin-top: 16px;
 }
 .back-btn:hover {
   background-color: #4a5568;
