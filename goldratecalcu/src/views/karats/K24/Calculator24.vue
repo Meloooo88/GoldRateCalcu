@@ -18,7 +18,7 @@ function calculate() {
 }
 
 function goBack() {
-  router.push('/') // Go back to landing page
+  router.push('/landing') // Go back to landing page
 }
 </script>
 
